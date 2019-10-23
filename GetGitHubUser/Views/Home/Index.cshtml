@@ -1,31 +1,20 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
+    var username = Request["Username"];
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div style="padding: 10px" class="row">
+    <img src="~/Content/Images/github-logo.png" />
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+<div style="padding: 10px" class="row">
+    <form asp-controller="User" action="/User" method="post" class="form-horizontal" role="form">
+        <div class="form-group" style="margin-left:10px">
+            <h3>Enter GitHub Username: </h3>
+            <input name="Username" class="form-control" placeholder="Enter Username" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div class="form-control-static"><input class="btn btn-success" type="submit" value="Search"/></div>
+        </div>
+    </form>
 </div>
