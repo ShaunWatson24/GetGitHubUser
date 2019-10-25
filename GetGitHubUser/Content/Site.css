@@ -22,3 +22,21 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.validation-summary-errors{
+    color: red;
+    font-size: larger;
+}
+
+.user-details{
+    color: black;
+    font-size: large;
+    border-bottom: solid;
+    padding: 2px;
+}
+
+.user-details-value {
+    color: gray;
+    font-size: large;
+    padding: 2px;
+}

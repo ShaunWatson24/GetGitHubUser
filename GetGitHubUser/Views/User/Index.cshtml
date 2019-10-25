@@ -1,0 +1,71 @@
+﻿@model GetGitHubUser.Models.GitHubUserModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <h1>User Details</h1>
+        <hr />
+        @Html.ValidationSummary()
+        <div style="padding-bottom:10px">
+            @if (!string.IsNullOrWhiteSpace(Model.AvatarUrl))
+            {
+                <img src="@Url.Content(Model.AvatarUrl)" alt="Image" />
+            }
+        </div>
+        <dl class="dl-horizontal">
+            <dt class="user-details">
+                Id
+            </dt>
+
+            <dd class="user-details-value">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+
+            <dt class="user-details">
+                Username
+            </dt>
+
+            <dd class="user-details-value">
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt class="user-details">
+                Full Name
+            </dt>
+
+            <dd class="user-details-value">
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+
+            <dt class="user-details">
+                Location
+            </dt>
+
+            <dd class="user-details-value">
+                @Html.DisplayFor(model => model.Location)
+            </dd>
+
+            <dt class="user-details">
+                Repositories
+            </dt>
+
+            <dd class="user-details-value">
+                @Html.DisplayFor(model => model.RepositoriesUrl)
+                @if (!string.IsNullOrWhiteSpace(Model.RepositoriesUrl))
+                {
+                    @Html.ActionLink(linkText: "See Top Repo's", actionName: "Index", controllerName: "Repository", routeValues: new { repoUrl = Model.RepositoriesUrl }, htmlAttributes: null)
+                }
+            </dd>
+
+            <dt class="user-details">
+                Link to Profile
+            </dt>
+
+            <dd class="user-details-value">
+                <a target="_blank" href="@Model.ProfileUrl">@Model.ProfileUrl</a>
+        </dl>
+        @Html.ActionLink("Go Back", "Index", "Home")
+    </div>
