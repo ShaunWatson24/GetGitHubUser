@@ -54,3 +54,8 @@ D:\Open Source\GetGitHubUser\GetGitHubUser\obj\Debug\GetGitHubUser.csproj.CoreCo
 D:\Open Source\GetGitHubUser\GetGitHubUser\obj\Debug\GetGitHubUser.csproj.CopyComplete
 D:\Open Source\GetGitHubUser\GetGitHubUser\obj\Debug\GetGitHubUser.dll
 D:\Open Source\GetGitHubUser\GetGitHubUser\obj\Debug\GetGitHubUser.pdb
+D:\Open Source\GetGitHubUser\GetGitHubUser\bin\FluentAssertions.dll
+D:\Open Source\GetGitHubUser\GetGitHubUser\bin\System.ValueTuple.dll
+D:\Open Source\GetGitHubUser\GetGitHubUser\bin\FluentAssertions.pdb
+D:\Open Source\GetGitHubUser\GetGitHubUser\bin\FluentAssertions.xml
+D:\Open Source\GetGitHubUser\GetGitHubUser\bin\System.ValueTuple.xml
